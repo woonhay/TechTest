@@ -17,26 +17,14 @@ public class Loader {
         boolean isValidNumber;
         String input = scanner.nextLine();
 
-        try {
-            Integer.parseInt(input);
-            isValidNumber = true;
-        }
-        catch( Exception e ) {
-            isValidNumber = false;
-        }
+        isValidNumber = checkValidNumber(input);
 
         while (!isValidNumber) {
             displayManager.displayHint();
             displayManager.displayQuestion();
             input = scanner.nextLine();
 
-            try {
-                Integer.parseInt(input);
-                isValidNumber = true;
-            }
-            catch( Exception e ) {
-                isValidNumber = false;
-            }
+            isValidNumber = checkValidNumber(input);
         }
 
         num = Integer.parseInt(input);
@@ -46,5 +34,15 @@ public class Loader {
         String result = converter.convert(num);
 
         displayManager.displayAnswer(result);
+    }
+
+    private static boolean checkValidNumber(String input) {
+        try {
+            Integer.parseInt(input);
+            return true;
+        }
+        catch( Exception e ) {
+            return false;
+        }
     }
 }
