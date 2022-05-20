@@ -36,7 +36,7 @@ public class Loader {
         displayManager.displayAnswer(result);
     }
 
-    private static boolean checkValidNumber(String input) {
+    public static boolean checkValidNumber(String input) {
         try {
             Integer.parseInt(input);
             return true;
