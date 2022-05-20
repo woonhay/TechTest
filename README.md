@@ -13,6 +13,7 @@ The Program takes as its input a number (n) and converts it to a string, the con
 ## Setup
 1. Copy the repository HTML link
 2. Git clone the repository to a local directory of your choice
+`git clone https://github.com/woonhay/TechTest.git`
 3. Open the application in an IDE of your choice
 4. Run the app from your IDE and the result of simulation should be shown based on the value of the input value
 5. View the result
