@@ -1,9 +1,15 @@
 package com.sparta.wl.controller;
 
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Converter {
+
+    private static Logger converterLogger = Logger.getLogger("converterLogger");
+
     public static String convert(int number) {
+        converterLogger.log(Level.INFO, "Method start");
         ArrayList<Integer> factors = new ArrayList<Integer>();
         factors = findFactors(number);
         String result = "";
@@ -20,6 +26,8 @@ public class Converter {
         }
         if (result.equals(""))
             result = String.valueOf(number);
+        converterLogger.log(Level.INFO, "Method end");
+        converterLogger.log(Level.INFO, "Result: " + result);
         return result;
     }
 
