@@ -25,7 +25,7 @@ public class InputTester {
 
     @Test
     public void testInputNegative() {
-        Assertions.assertTrue(loader.checkValidNumber("0"));
+        Assertions.assertTrue(loader.checkValidNumber("-20"));
     }
 
     @Test
